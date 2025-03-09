@@ -1,7 +1,8 @@
-# Lists
+# 1.  Lists
 # A list data type is a collection (data structure contain multiple values)
 # A list is a mutable object (change contents of the list)
-# As list is mutable, no need to modify or reassign back to list when any operation is performed
+# As list is mutable, no need to modify or reassign back to new list when any operation is performed
+#   as the modification occurs directly to list itself
 # None is reserved word in python is specific data type resulting nothing
 
 my_list = [1, 2, 3, 4, 5]
@@ -63,6 +64,7 @@ print(my_list)
 # slicing lists
 # prints from index 2 to 4
 # end index not inclusive
+# returns a list
 print(my_list[2:4])
 # negative indexing
 print(my_list[-2:], 'negative indexing')
@@ -75,7 +77,7 @@ another_list = [1, 2, 3, 4, 5]
 new_list = my_list + another_list
 print(new_list)
 
-# ASSIGNMENT
+# 2. ASSIGNMENT
 # create another list contains specific contents :
 #   - last 3 elements first list combined with last 3 elements of second list
 #   - lists are to be sorted and reversed first before concatenating
@@ -92,7 +94,7 @@ second_list.reverse()
 third_list = first_list[-3:] + second_list[-3:]
 print('Assignment : {0}'.format(third_list))
 
-# Accessing elements in nested lists
+# 3. Accessing elements in nested lists
 my_list = ['a', 'b', 'c', 1, 2, 3, ['apple', 'banana', 'orange'], 'd']
 print(my_list[6])
 print(my_list[6][1])
@@ -109,4 +111,14 @@ print(my_list)
 # change robert to doe
 my_list[6][2][1] = 'doe'
 print(my_list)
+
+# 4. Finding index positions in lists and counting duplicates
+# index method returns the position of the parameter
+index_pos = my_list.index('d')
+print(index_pos)
+
+# count method returns number of times the parameter appears in the list
+my_list=['a','c','d','b','c','e','e','c']
+c_count = my_list.count('c')
+print(c_count)
 
